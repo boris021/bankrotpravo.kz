@@ -15,3 +15,16 @@
 		opacity: 0.9;
 	}
 }
+
+.title {
+	font-family: 'Futura Bold';
+	font-weight: 700;
+	@include adaptiveValue("font-size", 30, 26);
+	line-height: math.div(36, 30);
+	text-align: center;
+	@include adaptiveValue("margin-bottom", 45, 30);
+
+	span {
+		color: #A49872;
+	}
+}

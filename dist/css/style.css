@@ -459,6 +459,10 @@ h6 {
   display: none;
 }
 
+.footer {
+  margin-top: 200px;
+}
+
 .main {
   position: relative;
 }
@@ -1071,6 +1075,31 @@ h6 {
   margin-bottom: 10px;
 }
 
+.support {
+  position: relative;
+}
+
+.support::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: url(../img/support/bg-left.png) bottom left no-repeat;
+}
+
+.support::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 160px;
+  right: 0;
+  background: url(../img/support/bg-right.png) center right no-repeat;
+  z-index: -1;
+}
+
 .support__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1201,6 +1230,137 @@ h6 {
   margin-bottom: 20px;
 }
 
+.bankrupt {
+  position: relative;
+  padding: 50px 20px;
+}
+
+@supports (margin-top: clamp( 5rem , 1.814159292rem  +  15.9292035398vw , 16.25rem )) {
+  .bankrupt {
+    margin-top: clamp( 5rem , 1.814159292rem  +  15.9292035398vw , 16.25rem );
+  }
+}
+
+@supports not (margin-top: clamp( 5rem , 1.814159292rem  +  15.9292035398vw , 16.25rem )) {
+  .bankrupt {
+    margin-top: calc(5rem + 11.25 * (100vw - 20rem) / 70.625);
+  }
+}
+
+.bankrupt::before {
+  content: "";
+  position: absolute;
+  width: 616px;
+  height: 817px;
+  bottom: -6px;
+  right: 0;
+  background: url(../img/bankrupt/bk-right.png) center right no-repeat;
+}
+
+.bankrupt::before img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bankrupt__bg {
+  position: absolute;
+  width: 100%;
+  height: 617px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bankrupt__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bankrupt__container {
+  position: relative;
+}
+
+.bankrupt__title {
+  font-family: "Futura Bold";
+  font-weight: 700;
+  line-height: 1.2;
+  color: #F2F2F2;
+  margin-bottom: 50px;
+  text-align: left;
+  max-width: 768px;
+}
+
+@supports (font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem )) {
+  .bankrupt__title {
+    font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem )) {
+  .bankrupt__title {
+    font-size: calc(1.625rem + 0.25 * (100vw - 20rem) / 70.625);
+  }
+}
+
+.bankrupt__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bankrupt__items {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 80%;
+          flex: 0 1 80%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 2;
+}
+
+.bankrupt__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 306px;
+  height: 190px;
+  border: 0.1px solid #C4C4C4;
+  padding: 40px;
+}
+
+.bankrupt__item-title {
+  font-family: "Futura Md BT";
+  font-weight: 700;
+  font-size: 30px;
+  color: #A49872;
+  margin-bottom: 15px;
+}
+
+.bankrupt__item-text {
+  font-family: "Futura Md BT";
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+
 @media (max-width: 1282px) {
   .main__left {
     -webkit-box-flex: 1;
@@ -1216,6 +1376,12 @@ h6 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 1049px) {
+  .bankrupt::before {
+    display: none;
   }
 }
 
@@ -1330,6 +1496,18 @@ h6 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+
+  .bankrupt__items {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .bankrupt__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 
@@ -1475,5 +1653,9 @@ h6 {
   .service__row-item-btn {
     padding: 22px;
     font-size: 14px;
+  }
+
+  .bankrupt__item {
+    padding: 25px;
   }
 }

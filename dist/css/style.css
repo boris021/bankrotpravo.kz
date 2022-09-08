@@ -459,10 +459,6 @@ h6 {
   display: none;
 }
 
-.footer {
-  margin-top: 200px;
-}
-
 .main {
   position: relative;
 }
@@ -1395,7 +1391,6 @@ h6 {
 .company__row {
   display: block;
   margin-top: 120px;
-  position: relative;
 }
 
 .company__items {
@@ -1486,6 +1481,267 @@ h6 {
   text-align: center;
   font-weight: 400;
   line-height: 1.2;
+}
+
+.forms {
+  padding: 60px 0;
+  position: relative;
+}
+
+@supports (margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem )) {
+  .forms {
+    margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem );
+  }
+}
+
+@supports not (margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem )) {
+  .forms {
+    margin-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 70.625);
+  }
+}
+
+.forms-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.forms-bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.forms__title {
+  width: 70%;
+  margin: auto;
+  font-family: "Futura Bold";
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 60px;
+}
+
+@supports (font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem )) {
+  .forms__title {
+    font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.625rem , 1.5542035398rem  +  0.3539823009vw , 1.875rem )) {
+  .forms__title {
+    font-size: calc(1.625rem + 0.25 * (100vw - 20rem) / 70.625);
+  }
+}
+
+.forms__row {
+  width: 70%;
+  margin: auto;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.forms__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.forms__row-title {
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #A49872;
+  margin-bottom: 35px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.input {
+  background: #E9E9E9;
+  border-radius: 10px;
+  height: 45px;
+  padding: 15px;
+  width: 220px;
+  margin-right: 10px;
+}
+
+.input:last-child {
+  margin-right: 0;
+}
+
+.button {
+  background: -o-linear-gradient(347.6deg, #C8AC8D 36.84%, #E6CEA1 74.32%);
+  background: linear-gradient(102.4deg, #C8AC8D 36.84%, #E6CEA1 74.32%);
+  -webkit-box-shadow: 0px 36px 47px -18px #EDDCBB;
+          box-shadow: 0px 36px 47px -18px #EDDCBB;
+  border-radius: 10px;
+  height: 67px;
+  padding: 25px;
+  font-family: "Futura Md BT";
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.1764705882;
+  color: #FFFFFF;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button span {
+  text-transform: uppercase;
+}
+
+.map {
+  position: relative;
+}
+
+@supports (margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem )) {
+  .map {
+    margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem );
+  }
+}
+
+@supports not (margin-top: clamp( 2.5rem , 1.4380530973rem  +  5.3097345133vw , 6.25rem )) {
+  .map {
+    margin-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 70.625);
+  }
+}
+
+.map__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.map__location {
+  width: 481px;
+  padding: 30px 80px;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 20px;
+  margin-top: 5%;
+  font-family: "Futura Md BT";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.1764705882;
+}
+
+.map__location-adress {
+  margin-bottom: 30px;
+}
+
+.map__location-phone {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map__location-phone::before {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #A49872;
+}
+
+.map__location-email {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map__location-email::before {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #A49872;
+}
+
+.map__location-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map__location-link {
+  position: relative;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.map__location-link:hover {
+  opacity: 0.8;
+}
+
+.map__location-link:last-child {
+  margin-right: 0;
+}
+
+.mapyandex {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 @media (max-width: 1282px) {
@@ -1658,6 +1914,32 @@ h6 {
     height: auto;
     margin-bottom: 70px;
   }
+
+  .forms__title {
+    width: 100%;
+  }
+
+  .forms__row {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .input {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 61.99875em) and (max-width: 47.99875em) {
@@ -1808,7 +2090,19 @@ h6 {
     padding: 25px;
   }
 
+  .company__row {
+    margin-top: 80px;
+  }
+
   .company__item {
+    padding: 30px;
+  }
+
+  .company__item-title {
+    margin-top: 45px;
+  }
+
+  .forms__row {
     padding: 30px;
   }
 }
